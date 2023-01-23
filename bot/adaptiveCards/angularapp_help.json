@@ -1,0 +1,35 @@
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "size": "Medium",
+      "weight": "Bolder",
+      "text": "Angular application Development"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Due to the nature of development to angular, I will not be able to take long-term committed projects. But if there are one-off framework related work, please reach out",
+      "wrap": true
+    },
+    {
+      "type": "FactSet",
+      "facts": [
+        {
+          "title": "Like Count:",
+          "value": "${likeCount}"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Execute",
+      "title": "I Like This!",
+      "verb": "userlike",
+      "fallback": "Action.Submit"
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.4"
+}

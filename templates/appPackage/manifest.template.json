@@ -1,0 +1,73 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.14/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.14",
+    "version": "1.0.0",
+    "id": "{{state.fx-resource-appstudio.teamsAppId}}",
+    "packageName": "com.microsoft.teams.extension",
+    "developer": {
+        "name": "SKMINFOTECH LLC",
+        "websiteUrl": "https://www.sathishjayapal.com",
+        "privacyUrl": "https://www.sathishjayapal.com",
+        "termsOfUseUrl": "https://www.sathishjayapal.com"
+    },
+    "icons": {
+        "color": "resources/color.png",
+        "outline": "resources/outline.png"
+    },
+    "name": {
+        "short": "{{config.manifest.appName.short}}",
+        "full": "{{config.manifest.appName.full}}"
+    },
+    "description": {
+        "short": "Short description of {{config.manifest.appName.short}}",
+        "full": "Full description of {{config.manifest.appName.short}}"
+    },
+    "accentColor": "#FFFFFF",
+    "bots": [
+        {
+            "botId": "{{state.fx-resource-bot.botId}}",
+            "scopes": [
+                "personal",
+                "team",
+                "groupchat"
+            ],
+            "supportsFiles": false,
+            "isNotificationOnly": false,
+            "commandLists": [
+                {
+                    "scopes": [
+                        "personal",
+                        "team",
+                        "groupchat"
+                    ],
+                    "commands": [
+                        {
+                            "title": "home",
+                            "description": "Homepage Renderer"
+                        },
+                        {
+                            "title": "angular",
+                            "description": "Angular application help card"
+                        },
+                        {
+                            "title": "springboot",
+                            "description": "Spring Application help card"
+                        },
+                        {
+                            "title": "spring",
+                            "description": "Spring Boot Application help card"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "composeExtensions": [],
+    "configurableTabs": [],
+    "staticTabs": [],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": []
+}

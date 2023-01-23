@@ -1,0 +1,58 @@
+{
+    "appName": "SathishAppDevBot",
+    "version": "2.1.0",
+    "isFromSample": true,
+    "solutionSettings": {
+        "name": "fx-solution-azure",
+        "version": "1.0.0",
+        "hostType": "Azure",
+        "azureResources": [],
+        "capabilities": [
+            "Bot"
+        ],
+        "activeResourcePlugins": [
+            "fx-resource-local-debug",
+            "fx-resource-appstudio",
+            "fx-resource-cicd",
+            "fx-resource-api-connector",
+            "fx-resource-bot",
+            "fx-resource-identity"
+        ]
+    },
+    "programmingLanguage": "typescript",
+    "pluginSettings": {
+        "fx-resource-bot": {
+            "host-type": "app-service",
+            "capabilities": []
+        }
+    },
+    "projectId": "025af4a3-71d4-4651-87ca-956a831ce3c3",
+    "components": [
+        {
+            "hosting": "azure-web-app",
+            "name": "teams-bot",
+            "build": true,
+            "provision": true,
+            "folder": "bot",
+            "capabilities": [],
+            "sso": false,
+            "deploy": true
+        },
+        {
+            "name": "azure-web-app",
+            "connections": [
+                "identity",
+                "teams-bot"
+            ],
+            "provision": true,
+            "scenario": "Bot"
+        },
+        {
+            "name": "bot-service",
+            "provision": true
+        },
+        {
+            "name": "identity"
+        }
+    ]
+}
