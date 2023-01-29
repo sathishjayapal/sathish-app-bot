@@ -8,3 +8,10 @@ subscriptionInfo.json
 build
 .fx/configs/config.local.json
 .fx/states/state.local.json
+.idea/.gitignore
+.idea/aws.xml
+.idea/jpa-buddy.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/sathish-app-bot.iml
+.idea/vcs.xml
